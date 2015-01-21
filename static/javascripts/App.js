@@ -1,7 +1,10 @@
-var App = function() {
-	alert("app");
+var App = function(canvas, context) {
+	this.canvas = canvas;
+	this.context = context;
+	this.blinkytape = null;
 };
 
 App.prototype.init = function() {
-	alert("app.init");
+	this.blinkytape = new BlinkyTape(this.canvas, this.context);
+	this.blinkytape.init();
 };

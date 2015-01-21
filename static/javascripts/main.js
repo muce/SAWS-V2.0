@@ -14,7 +14,7 @@ function init() {
 	canvas.height = 100;
 	context = canvas.getContext("2d");
 	initAnimationFrame();
-	app = new App();
+	app = new App(canvas, context);
 	app.init();
 }
 
